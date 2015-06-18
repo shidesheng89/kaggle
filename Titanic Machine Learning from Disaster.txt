@@ -83,7 +83,7 @@ Testdata=loadtestdata()
 
 #归一化
 ss = StandardScaler()
-ss.fit_transform(Traindata)
+ss.fit_transform(np.r_[Testdata,Traindata])
 Traindata=ss.transform(Traindata)
 Testdata=ss.transform(Testdata)
 
